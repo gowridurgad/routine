@@ -8,8 +8,6 @@ on:
 jobs:
   Lint:
     runs-on: ubuntu-latest
-    env:
-       CGO_ENABLED: 1
     steps:
       - name: Checkout scm
         uses: actions/checkout@v4
@@ -47,6 +45,8 @@ jobs:
   Test:
     needs: Lint
     runs-on: ${{ matrix.runs-on }}
+    env:
+       CGO_ENABLED: 1
     strategy:
       fail-fast: false
       matrix:

@@ -45,8 +45,6 @@ jobs:
   Test:
     needs: Lint
     runs-on: ${{ matrix.runs-on }}
-    env:
-       CGO_ENABLED: 1
     strategy:
       fail-fast: false
       matrix:

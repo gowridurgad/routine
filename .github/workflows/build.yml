@@ -3,17 +3,13 @@
 name: build
 
 on:
-  push:
-    branches:
-      - main
-      - feature/**
-  pull_request:
-    branches:
-      - main
+   workflow_dispatch:
 
 jobs:
   Lint:
     runs-on: ubuntu-latest
+    env:
+       CGO_ENABLED: 1
     steps:
       - name: Checkout scm
         uses: actions/checkout@v4

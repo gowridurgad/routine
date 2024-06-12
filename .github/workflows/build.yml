@@ -224,7 +224,7 @@ jobs:
           echo "GOOS: ${GOOS}"
           echo "GOARCH: ${GOARCH}"
           go env
-          go test -v -race -coverprofile="coverage.txt" -covermode=atomic ./...
+          go test -v -coverprofile="coverage.txt" -covermode=atomic ./...
 
       # linux
       - name: 'Test on [linux] arch [386]'

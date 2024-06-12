@@ -48,9 +48,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ darwin ]
+        os: [ darwin, linux, windows ]
         arch: [ amd64 ]
-        go: [ '1.18', '1.19']
+        go: [ '1.18']
         exclude:
           # darwin excludes
           - os: darwin
